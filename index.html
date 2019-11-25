@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Landing Page</title>
+  <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/5c6ae1e82b.js" crossorigin="anonymous"></script>
+  <style media="screen">
+  @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #EEEEEE;
+    font-family: 'Lato', sans-serif
+  }
+
+  .blank {
+    display: none;
+  }
+
+  .containerLarge {
+    width: 100%;
+    text-align: center;
+    background-color: #EEEEEE;
+    z-index: 1;
+  }
+
+  .fixed {
+    position: fixed;
+  }
+
+  .tromboneLogo {
+    width: 20em;
+    margin-top: 2em;
+    margin-left: -25px;
+  }
+
+   ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  nav ul li a{
+    color: black;
+    text-decoration: none;
+    line-height: 25px;
+  }
+
+  section {
+    padding-top: 170px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  section h1 {
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .emailField {
+    margin-bottom: 20px;
+    width: 20em;
+    padding: 5px;
+    color: grey;
+
+  }
+
+  section button {
+    background-color: #F1C411;
+    padding:  5px 15px;
+    font-weight: bold;
+    font-size: .9em;
+    margin-top: 5px;
+    transition: .5s;
+
+  }
+  .container{
+    padding: 5px;
+  }
+  #hide {
+    display: none;
+  }
+  .whatWeDo {
+    text-align: center;
+  }
+
+  .whatWeDo ul li {
+    margin-bottom: 50px;
+  }
+
+  .iframe {
+    width: 100%;
+    text-align: center;
+
+  }
+  iframe{
+    width: 31.5em;
+    overflow: auto;
+  }
+  .products {
+    width: 70%;
+    text-align: center;
+    margin: 5em
+  }
+
+  .products li {
+    border: 1px solid black;
+    margin: 10px;
+    margin-bottom: 1em;
+  }
+
+  .products li h2:nth-child(1) {
+    background-color: lightgrey;
+    font-size: 1rem;
+    padding: 20px;
+  }
+
+  .products li h2:nth-child(2) {
+    margin: 15px 0;
+  }
+
+  .products li p {
+  line-height: 2em
+  }
+
+  .products li button{
+  background-color: #F1C411;
+  margin: 20px;
+  width: 30%;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: .5s;
+  }
+
+  button:hover {
+    background-color: #FF8B01;
+  }
+
+  .products li button:hover {
+    background-color: #FF8B01;
+  }
+
+
+
+  footer {
+    background-color: #dddddd;
+    text-align: right;
+    line-height: 25px;
+    padding: 20px;
+  }
+
+  footer li{
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 13px;
+  }
+
+  footer p {
+    color: #444
+  }
+
+  @media only screen and (min-width: 551px) {
+
+    #hide {
+      display: inherit;
+    }
+
+    .blank {
+      color: #EEE;
+    }
+
+
+
+    .whatWeDo ul li {
+      display: flex;
+    }
+
+    .whatWeDo h1, .whatWeDo p{
+      text-align: left;
+      margin-left: 15px;
+    }
+
+    i {
+      color: orange;
+      margin: 20px;
+
+    }
+
+    i:nth-child(2){
+      z-index: -3
+    }
+
+    iframe {
+      width: 100% auto;
+      align-self: center;
+      overflow: auto;
+    }
+
+
+
+
+  }
+
+  @media only screen and (min-width: 654px) {
+    .containerLarge {
+      display: flex;
+      padding-bottom: 20px;
+
+    }
+    .containerLarge nav{
+      width: 60%;
+      float: right;
+    }
+    .containerLarge nav ul {
+      display: flex;
+    width: 100%;
+    padding: 0 20%;
+    margin-right: 0px;
+
+
+    }
+
+    .blank {
+      display: inherit;
+      width: 1%;
+      color: #EEEEEE;
+    }
+
+    .containerLarge nav ul li{
+      margin: 35px 10px 0;
+
+    }
+
+
+
+    .containerLarge nav ul li:nth-child(3){
+
+      margin-right: 20px;
+
+    }
+    .tromboneLogo{
+      margin-left: 10px;
+      width: 300px
+
+    }
+
+    section h1 {
+      margin-top: -80px;
+    }
+
+    section .emailField {
+      width: 30%;
+    }
+
+
+  }
+
+  @media only screen and (min-width: 800px) {
+
+    .blank {
+
+      width: 60%;
+    }
+
+    .products ul {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .products {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+
+    }
+
+    .products ul button {
+      width: 50%;
+    }
+
+    .products li {
+      width: 30%;
+    }
+    .whatWeDo ul {
+      margin-left: 10%;
+    }
+
+  }
+
+  @media only screen and (min-width: 1248px) {
+    .blank {
+
+      width: 190%;
+    }
+
+    .fullContainer {
+      width: 80%;
+    margin: 0 auto;
+    }
+
+    .whatWeDo ul {
+      margin-left: 150px;
+      margin-right: 20%;
+    }
+
+    iframe {
+      margin-bottom: 80px;
+    }
+
+    .products {
+      margin-bottom: 40px;
+    }
+  }
+
+
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="containerLarge fixed">
+    <img src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="Traombone Logo" class="tromboneLogo">
+    <div class="blank">
+      <p>blank</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="fullContainer">
+
+
+    <div class="container">
+
+      <section>
+
+
+        <h1>Handcrafted, home-made masterpieces</h1>
+
+        <input type="email" name="email" value="" placeholder="Enter your email address" class="emailField"><br>
+        <button type="button" name="button">GET STARTED</button>
+
+      </section>
+      <div class="whatWeDo">
+        <ul>
+
+          <li>
+            <i class="fas fa-fire fa-4x" id="hide"></i>
+            <div>
+
+
+              <h1>Premius Materials</h1>
+              <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevitity of your purchase</p>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-truck fa-3x fa-flip-horizontal" id="hide"></i>
+            <div>
+              <h1>Fast Shipping</h1>
+              <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free rerturns if your are not satisfied.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-battery-full fa-3x" id="hide"></i>
+            <div>
+              <h1>Quality Assurance</h1>
+              <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+            </div>
+          </li>
+        </ul>
+
+
+
+      </div>
+    </div>
+    <div class="iframe">
+      <iframe width="100" height="300" src="https://www.youtube.com/embed/y8Yv4pnO7qc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="products">
+      <ul>
+        <li>
+          <h2>TENOR TROMBONE</h2>
+          <h2>$600</h2>
+          <p>lorem ipsum</p>
+          <p>lorem ipsum</p>
+          <p>Lorem ipsum dolor.</p>
+          <p>lorem ipsum</p>
+          <button type="button" name="button">SELECT</button>
+        </li>
+        <li>
+          <h2>TENOR TROMBONE</h2>
+          <h2>$900</h2>
+          <p>lorem ipsum</p>
+          <p>lorem ipsum</p>
+          <p>Lorem ipsum dolor.</p>
+          <p>lorem ipsum</p>
+          <button type="button" name="button">SELECT</button>
+        </li>
+        <li>
+          <h2>TENOR TROMBONE</h2>
+          <h2>$1200</h2>
+          <p>lorem ipsum</p>
+          <p>lorem ipsum</p>
+          <p>Lorem ipsum dolor.</p>
+          <p>lorem ipsum</p>
+          <button type="button" name="button">SELECT</button>
+        </li>
+      </ul>
+    </div>
+
+    <footer>
+      <ul>
+        <li>Privacy</li>
+        <li>Terms</li>
+        <li>Contact</li>
+      </ul>
+      <p>Copyright 2019, Original Trombones</p>
+    </footer>
+  </div>
+</body>
+
+</html>
